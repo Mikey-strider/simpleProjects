@@ -1,0 +1,38 @@
+5.
+I want record every time I go out to eat. I can store the data in an object. 
+It will have the date/time of my visit, the name of the restaurant, a list of the items I ordered, 
+and a rating (from 1 to 5). I will store these objects in an array.
+Following are type definitions for this:
+
+
+type Rating = 1 | 2 | 3 | 4 | 5;
+
+type EatingOutRecord = {
+  timestamp: number;
+  restaurantName: string;
+  order: string[];
+  rating: Rating;
+}
+
+
+Sometimes I want to see all the places I ate in a certain time period. 
+For example, I want a list of all restaurants I visited in the month of March. 
+To do this, I need a function that extracts from the array all items between two dates. 
+The function signature should look like this:
+
+
+function getRestaurantsBetween(records: Array<EatingOutRecord>, startTime: number, endTime: number): string[] {
+
+}
+
+
+Write the body of the function. 
+
+This will look very similar to the last exercise, 
+but take note of the types: the function takes an array of the record objects: records: 
+Array<EatingOutRecord>, but the function returns an array of just the restaurant names: string[].
+This can be accomplished with the .filter() and .map() array methods.
+
+
+We will build on this scenario for future exercises.
+Please ask me any questions you have.
